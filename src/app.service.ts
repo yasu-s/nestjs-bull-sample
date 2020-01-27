@@ -11,10 +11,18 @@ export class AppService {
   }
 
   async addQueue() {
-    const job = await this.testQueue.add({
-      foo: 'bar',
-    });
+    const job = await this.testQueue.add(
+      {
+        foo: 'bar',
+      },
+      { lifo: true },
+    );
 
     return job.id;
+  }
+
+  async getState(jobId: number) {
+    const job = await this.testQueue.getJob(jobId);
+    return job.getState();
   }
 }

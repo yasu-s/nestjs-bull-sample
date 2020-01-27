@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('bull_test')
+  bullTest() {
+    return this.appService.addQueue();
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "NestJS",
+
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
+  "service": "nestjs-server",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+
+  "remoteUser": "node",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+
+  "postCreateCommand": "yarn install",
+
+  "extensions": [
+    "dbaeumer.vscode-eslint"
+  ]
+}

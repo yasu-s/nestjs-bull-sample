@@ -16,9 +16,4 @@ export class AppService {
 
     return job.id;
   }
-
-  async getState(jobId: number) {
-    const job = await this.testQueue.getJob(jobId);
-    return job.getState();
-  }
 }

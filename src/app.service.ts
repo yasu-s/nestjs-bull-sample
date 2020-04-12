@@ -6,10 +6,6 @@ import { Queue } from 'bull';
 export class AppService {
   constructor(@InjectQueue('test') private readonly testQueue: Queue) {}
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-
   async addQueue() {
     const job = await this.testQueue.add(
       {

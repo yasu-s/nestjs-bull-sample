@@ -10,7 +10,7 @@ import { AppService } from './app.service';
     BullModule.registerQueue({
       name: 'test',
       redis: {
-        host: process.env.REDIS_SERVER || 'localhost',
+        host: 'localhost',
         port: 6379,
       },
     }),

@@ -7,13 +7,7 @@ export class AppService {
   constructor(@InjectQueue('test') private readonly testQueue: Queue) {}
 
   async addQueue() {
-    const job = await this.testQueue.add(
-      {
-        foo: 'bar',
-      },
-      { lifo: true },
-    );
-
+    const job = await this.testQueue.add({}, { lifo: true });
     return job.id;
   }
 }

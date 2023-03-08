@@ -21,7 +21,7 @@
   "dependencies": {
     "@nestjs/bull": "^0.0.1",
     "@nestjs/common": "^6.7.2",
-    "@nestjs/core": "^6.7.2",
+    "@nestjs/core": "^9.0.5",
     "@nestjs/platform-express": "^6.7.2",
     "bull": "^3.12.1",
     "reflect-metadata": "^0.1.13",
